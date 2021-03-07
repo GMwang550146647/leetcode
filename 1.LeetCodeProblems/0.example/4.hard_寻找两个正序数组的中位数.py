@@ -30,7 +30,7 @@ class Solution():
 
     def myFun(self, nums1, nums2):
         def get_element_k(k):
-
+            pass
         len_num1=len(nums1)
         len_num2=len(nums2)
         if len_num1==0:

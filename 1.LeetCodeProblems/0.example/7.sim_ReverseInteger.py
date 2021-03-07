@@ -61,8 +61,12 @@ class Solution():
 
     def main(self):
         num = -294987498
+
+        # self.testTime(self.myFun, args=(num,))
+        # time.sleep(1)
         self.testTime(self.SA, args=(num,))
-        self.testTime(self.myFun, args=(num,))
+        self.testTime(self.SA, args=(num,))
+        self.testTime(self.SA, args=(num,))
 
 
 
