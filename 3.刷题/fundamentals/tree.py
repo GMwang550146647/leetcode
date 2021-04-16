@@ -11,8 +11,9 @@ class Tree():
         if current_index>=len(tree_list):
             return None
         #防止该节点是None的时候
-        val =tree_list[current_index] if tree_list[current_index] else 0
-        root=TreeNode(val)
+        if tree_list[current_index] is None:
+            return None
+        root=TreeNode(tree_list[current_index])
         root.left=self.build_tree_from_list(tree_list,current_index=current_index*2+1)
         root.right=self.build_tree_from_list(tree_list,current_index=current_index*2+2)
         return root
