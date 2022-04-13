@@ -260,28 +260,29 @@ class BinarySearchTree():
 
 
 
+if __name__ == '__main__':
 
-tr=BinarySearchTree()
+    tr=BinarySearchTree()
 
-'''1.put测试'''
-for num in range(8):
-    tr[num]=num**2
+    '''1.put测试'''
+    for num in range(8):
+        tr[num]=num**2
+        tr.show()
+        print("***************")
+    print("____________________")
+    '''2.get测试'''
+    print(6 in tr)
+    print(tr[7])
+    print("____________________")
+    '''3.测试__iter__'''
+    for key in tr:
+        print(key,':',tr[key])
+    print("____________________")
+
+    '''4.测试__del__:删除时候的平衡因子没有说'''
+    for item in range(0,3):
+        del tr[item]
+        tr.show()
+        print("#############")
+    tr[1]=100
     tr.show()
-    print("***************")
-print("____________________")
-'''2.get测试'''
-print(6 in tr)
-print(tr[7])
-print("____________________")
-'''3.测试__iter__'''
-for key in tr:
-    print(key,':',tr[key])
-print("____________________")
-
-'''4.测试__del__:删除时候的平衡因子没有说'''
-for item in range(0,3):
-    del tr[item]
-    tr.show()
-    print("#############")
-tr[1]=100
-tr.show()
